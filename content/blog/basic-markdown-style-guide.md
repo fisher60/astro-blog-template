@@ -92,4 +92,4 @@ Syntax highlighting is done using [Prism.js](https://github.com/PrismJS/prism). 
 
 ## Images
 
-![Blogster](/images/blogster.png)
+![Blogster](images/blogster.png)
