@@ -37,7 +37,7 @@ const sortedPosts = posts
               <div class="title">
                 {post.frontmatter.external ? (
                   <a
-                    href={post.frontmatter.url}
+                    href={`./${post.frontmatter.url}`}
                     target="_blank"
                     class="unset hover:text-text-link"
                   >
@@ -48,7 +48,7 @@ const sortedPosts = posts
                   </a>
                 ) : (
                   <a
-                    href={`/blog/${post.slug}`}
+                    href={`./blog/${post.slug}`}
                     class="unset hover:text-text-link"
                   >
                     {post.frontmatter.title}
