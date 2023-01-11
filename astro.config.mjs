@@ -19,7 +19,7 @@ const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
 const LOCALHOST_BASE = ""
 // the url to access your blog after deploying it somewhere (Eg. Netlify)
 const LIVE_URL = "https://fisher60.github.io";
-const LIVE_BASE = "astro-blog-template"
+const LIVE_BASE = "/astro-blog-template"
 // this is the astro command your npm script runs
 const SCRIPT = process.env.npm_lifecycle_script || "";
 const isBuild = SCRIPT.includes("astro build");
