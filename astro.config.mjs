@@ -16,7 +16,7 @@ import tailwind from "@astrojs/tailwind";
 const SERVER_PORT = 3000;
 // the url to access your blog during local development
 
-const LIVE_URL = "https://fisher60.github.io";
+const LIVE_URL = "https://fisher60.github.io/astro-blog-template";
 const LIVE_BASE = "/astro-blog-template"
 // this is the astro command your npm script runs
 const SCRIPT = process.env.npm_lifecycle_script || "";
@@ -37,14 +37,15 @@ let BASE_PATH = LIVE_BASE;
 //   BASE_PATH = LIVE_BASE;
 // }
 
-export default defineConfig({
-  server: { port: SERVER_PORT },
-  site: BASE_URL,
-  base: BASE_PATH,
-  integrations: [
-    sitemap(),
-    tailwind({
-      config: { applyBaseStyles: false },
-    }),
-  ],
-});
+export default defineConfig(
+  {
+    server: { port: SERVER_PORT },
+    site: BASE_URL,
+    integrations: [
+      sitemap(),
+      tailwind({
+        config: { applyBaseStyles: false },
+      }),
+    ],
+  }
+);
