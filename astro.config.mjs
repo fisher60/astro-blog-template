@@ -17,25 +17,18 @@ const SERVER_PORT = 3000;
 // the url to access your blog during local development
 
 const LIVE_URL = "https://fisher60.github.io/astro-blog-template";
-const LIVE_BASE = "/astro-blog-template"
 // this is the astro command your npm script runs
 const SCRIPT = process.env.npm_lifecycle_script || "";
 const isBuild = SCRIPT.includes("astro build");
-let BASE_URL = LIVE_URL;
-let BASE_PATH = LIVE_BASE;
 
-// Uncomment for dev
-// const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
-// const LOCALHOST_BASE = ""
-// let BASE_URL = LOCALHOST_URL;
-// let BASE_PATH = LOCALHOST_BASE;
-// the url to access your blog after deploying it somewhere (Eg. Netlify)
+const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
+let BASE_URL = LOCALHOST_URL;
+const BASE_PATH = "/astro-blog-template"
 
-// // When you're building your site in local or in CI, you could just set your URL manually
-// if (isBuild) {
-//   BASE_URL = LIVE_URL;
-//   BASE_PATH = LIVE_BASE;
-// }
+// When you're building your site in local or in CI, you could just set your URL manually
+if (isBuild) {
+  BASE_URL = LIVE_URL;
+}
 
 export default defineConfig(
   {
