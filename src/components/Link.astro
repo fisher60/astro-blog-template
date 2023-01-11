@@ -3,12 +3,10 @@ export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
 
 const { href, text, class: className, ...props } = Astro.props;
 
-const hardCodedSitePath = "https://fisher60.github.io/astro-blog-template";
-
 ---
 
 <a
-  href={`${hardCodedSitePath}${href}`}
+  href={href}
   class:list={[className]}
   {...props}
 ><slot />{text}</a>

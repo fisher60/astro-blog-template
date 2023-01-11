@@ -1,5 +1,5 @@
 /* eslint-disable turbo/no-undeclared-env-vars */
-import { defineConfig } from "astro/config";
+import {defineConfig} from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 
@@ -27,19 +27,16 @@ const BASE_PATH = "/astro-blog-template"
 
 // When you're building your site in local or in CI, you could just set your URL manually
 if (isBuild) {
-  BASE_URL = LIVE_URL;
+    BASE_URL = LIVE_URL;
 }
 
-export default defineConfig(
-  {
-    server: { port: SERVER_PORT },
-    site: BASE_URL,
-    base: BASE_PATH,
+export default defineConfig({
+    site: "https://fisher60.github.io/astro-blog-template",
+    base: "/astro-blog-template",
     integrations: [
       sitemap(),
       tailwind({
         config: { applyBaseStyles: false },
       }),
     ],
-  }
-);
+});
