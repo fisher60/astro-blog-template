@@ -48,13 +48,13 @@ const sortedPosts = posts
                     </span>
                   </a>
                 ) : (
-                  <Link href={`blog/${post.slug}`} text={post.frontmatter.title} class="unset hover:text-text-link" />
-                  // <a
-                  //   href={`/blog/${post.slug}`}
-                  //   class="unset hover:text-text-link"
-                  // >
-                  //   {post.frontmatter.title}
-                  // </a>
+                  // <Link href={`blog/${post.slug}`} text={post.frontmatter.title} class="unset hover:text-text-link" />
+                  <a
+                    href={`blog/${post.slug}`}
+                    class="unset hover:text-text-link"
+                  >
+                    {post.frontmatter.title}
+                  </a>
                 )}
               </div>
               <div class="text-text-muted text-sm italic">
